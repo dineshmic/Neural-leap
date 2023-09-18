@@ -12,12 +12,12 @@ layout: 'base.njk'
 			
 			<div class="row mt-5 d-flex align-items-stretch">
 
-				<!--=============================Work Text===============================-->
+				<!--=============================Work card for Text===============================-->
 				<div class="col-md-6 col-lg-4 mb-4">
 					<div class="work-card">
 						<h2>Text</h2>
 						<ul>
-							{%- for item in collections.work -%}
+							{%- for item in collections.work | reverse -%}
 								{%- if item.data.category == 'Text' -%}
 									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
 								{%- endif -%}
