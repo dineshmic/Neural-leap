@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: neural-leap-cms
   
 media_folder: "public/assets/images/blog"
 public_folder: "/assets/images/blog"
@@ -38,8 +38,18 @@ collections:
   create: true # Allow users to create new documents in this collection
   slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields: # The fields for each document, usually in front matter
-    - {label: "Category", name: "category", widget: "select", options: ["Text", "Image", "3D", "Video", "Speech", "Multimodal"]}
-    - {label: "Title", name: "title", widget: "string"}
+    - { label: "Title Tag", name: "titleTag", widget: "string"}
+    - { label: "Meta Description", name: "metaDescription", widget: "string"}
+    - { label: "OG Title", name: "ogTitle", widget: "string"}
+    - { label: "OG Description", name: "ogDescription", widget: "string"}
+    - { label: "OG Image", name: "ogImage", widget: "image"}
+    - { label: "Twitter Title", name: "twitterTitle", widget: "string"}
+    - { label: "Twitter Description", name: "twitterDescription", widget: "string"}
+    - { label: "Twitter Image", name: "twitterImage", widget: "image"}
+    - { label: "Event Name For Tracking", name: "eventNameForTracking", widget: "string"}
+    - { label: "Event ID For Tracking", name: "eventIdForTracking", widget: "string"}
+    - {label: "Our Work Category", name: "category", widget: "select", options: ["Text", "Image", "3D", "Video", "Speech", "Multimodal"]}
+    - {label: "Our Work Title", name: "title", widget: "string"}
     - {label: "Title Line 1", name: "titleLine1", widget: "string"}
     - {label: "Title Line 2", name: "titleLine2", widget: "string"}
     - {label: "Tag 1", name: "tag1", widget: "string"}
