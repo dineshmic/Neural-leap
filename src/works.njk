@@ -26,6 +26,78 @@ layout: 'base.njk'
 					</div>
 				</div>
 
+				<!--=============================Work card for Image===============================-->
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="work-card">
+						<h2>Image</h2>
+						<ul>
+							{%- for item in collections.work | reverse -%}
+								{%- if item.data.category == 'Image' -%}
+									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
+								{%- endif -%}
+							{%- endfor -%}
+						</ul>
+					</div>
+				</div>
+
+				<!--=============================Work card for 3D===============================-->
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="work-card">
+						<h2>3D</h2>
+						<ul>
+							{%- for item in collections.work | reverse -%}
+								{%- if item.data.category == '3D' -%}
+									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
+								{%- endif -%}
+							{%- endfor -%}
+						</ul>
+					</div>
+				</div>
+
+				<!--=============================Work card for Video===============================-->
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="work-card">
+						<h2>Video</h2>
+						<ul>
+							{%- for item in collections.work | reverse -%}
+								{%- if item.data.category == 'Video' -%}
+									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
+								{%- endif -%}
+							{%- endfor -%}
+						</ul>
+					</div>
+				</div>
+
+				<!--=============================Work card for Speech===============================-->
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="work-card">
+						<h2>Speech</h2>
+						<ul>
+							{%- for item in collections.work | reverse -%}
+								{%- if item.data.category == 'Speech' -%}
+									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
+								{%- endif -%}
+							{%- endfor -%}
+						</ul>
+					</div>
+				</div>
+
+				<!--=============================Work card for Multimodal===============================-->
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="work-card">
+						<h2>Multimodal</h2>
+						<ul>
+							{%- for item in collections.work | reverse -%}
+								{%- if item.data.category == 'Multimodal' -%}
+									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
+								{%- endif -%}
+							{%- endfor -%}
+						</ul>
+					</div>
+				</div>
+
+				
+
 
 
 			</div>
