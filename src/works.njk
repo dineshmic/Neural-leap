@@ -1,0 +1,34 @@
+---
+title: Works
+layout: 'base.njk'
+---
+	
+
+	
+	<!--=============================Section 1===============================-->
+	<div class="section1">
+		<div class="container">
+			<h1 class="blog-page-header-w-100 text-center"><span>Our</span> Works</h1>
+			
+			<div class="row mt-5 d-flex align-items-stretch">
+
+				<!--=============================Work Text===============================-->
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="work-card">
+						<h2>Text</h2>
+						<ul>
+							{%- for item in collections.work -%}
+								{%- if item.data.category == 'Text' -%}
+									<li><a href="{{ item.url }}">{{ item.data.titleLine1 }} {{ item.data.titleLine2 }}</a></li>
+								{%- endif -%}
+							{%- endfor -%}
+						</ul>
+					</div>
+				</div>
+
+
+
+			</div>
+			
+		</div>
+	</div>

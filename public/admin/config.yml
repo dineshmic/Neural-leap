@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: master
+  
+media_folder: "public/assets/images/blog"
+public_folder: "/assets/images/blog"
+
+collections:
+- name: "blog" # Used in routes, e.g., /admin/collections/blog
+  label: "Blog" # Used in the UI
+  folder: "src/blog" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - { label: "Title Tag", name: "titleTag", widget: "string"}
+    - { label: "Meta Description", name: "metaDescription", widget: "string"}
+    - { label: "OG Title", name: "ogTitle", widget: "string"}
+    - { label: "OG Description", name: "ogDescription", widget: "string"}
+    - { label: "OG Image", name: "ogImage", widget: "image"}
+    - { label: "Twitter Title", name: "twitterTitle", widget: "string"}
+    - { label: "Twitter Description", name: "twitterDescription", widget: "string"}
+    - { label: "Twitter Image", name: "twitterImage", widget: "image"}
+    - { label: "Event Name For Tracking", name: "eventNameForTracking", widget: "string"}
+    - { label: "Event ID For Tracking", name: "eventIdForTracking", widget: "string"}
+    - {label: "Blog Title", name: "title", widget: "string"}
+    - {label: "Category", name: "category", widget: "string"}
+    - {label: "Description", name: "description", widget: "string"}
+    - {label: "Author", name: "author", widget: "string"}
+    - {label: "Date", name: "date", widget: "datetime"}
+    - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Image Caption", name: "imageAlt", widget: "string"}
+    - {label: "Body", name: "body", widget: "markdown"}
+
+- name: "work" # Used in routes, e.g., /admin/collections/blog
+  label: "Our Works" # Used in the UI
+  folder: "src/work" # The path to the folder where the documents are stored
+  create: true # Allow users to create new documents in this collection
+  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields: # The fields for each document, usually in front matter
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Category", name: "category", widget: "select", options: ["Text", "Image", "Video"]}
+    - {label: "Title Line 1", name: "title-line-1", widget: "string"}
+    - {label: "Title Line 2", name: "title-line-2", widget: "string"}
+    - {label: "Tag 1", name: "tag-1", widget: "string"}
+    - {label: "Tag 2", name: "tag-2", widget: "string"}
+    - {label: "Tag 3", name: "tag-3", widget: "string"}
+    - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
+    - {label: "Project Title", name: "project-title", widget: "string"}
+    - {label: "Project Developer", name: "project-developer", widget: "string"}
+    - {label: "Featured Image", name: "image", widget: "image"}
+    - {label: "Image Caption", name: "imageAlt", widget: "string"}
